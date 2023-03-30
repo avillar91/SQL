@@ -1,0 +1,26 @@
+--Create a tshirt store database
+
+CREATE TABLE black_currant (id INTEGER PRIMARY KEY, category TEXT, quantity INTEGER, color TEXT, price INTEGER, size TEXT); 
+
+INSERT INTO black_currant VALUES (1, "adult", 5, "blue", 15, "small");
+INSERT INTO black_currant VALUES (2, "adult", 5, "blue", 15, "medium");
+INSERT INTO black_currant VALUES (3, "adult", 5, "blue", 15, "large");
+INSERT INTO black_currant VALUES (4, "youth", 6, "blue", 10, "small");
+INSERT INTO black_currant VALUES (5, "youth", 6, "blue", 10, "medium");
+INSERT INTO black_currant VALUES (6, "youth", 6, "blue", 10, "large");
+INSERT INTO black_currant VALUES (7, "adult", 7, "black", 15, "small");
+INSERT INTO black_currant VALUES (8, "adult", 7, "black", 15, "medium");
+INSERT INTO black_currant VALUES (9, "adult", 7, "black", 15, "large");
+INSERT INTO black_currant VALUES (10, "youth", 6, "black", 10, "small");
+INSERT INTO black_currant VALUES (11, "youth", 6, "black", 10, "medium");
+INSERT INTO black_currant VALUES (12, "youth", 6, "black", 10, "large");
+INSERT INTO black_currant VALUES (13, "adult", 8, "pink", 9, "small");
+INSERT INTO black_currant VALUES (14, "adult", 8, "pink", 9, "medium"); 
+INSERT INTO black_currant VALUES (15, "adult", 8, "pink", 9, "large");
+
+--display the database ordered by price
+SELECT * FROM black_currant;
+SELECT * FROM black_currant ORDER BY price;
+
+--what is the inventory by color? 
+SELECT color, SUM(quantity) FROM black_currant GROUP BY color; 
